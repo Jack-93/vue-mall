@@ -1,0 +1,27 @@
+<div class="page">
+    <div class="login-container">
+        <el-form :model="user" size="medium" :rules="rules" ref="userForm" >
+            <div class="title-container">
+                <h3 class="title">用户登录</h3>
+            </div>
+            <el-form-item prop="email">
+
+                <el-input placeholder="请输入用户名" v-model="user.email">
+                    <svg  slot="prefix" class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yonghu"></use>
+                    </svg>
+                </el-input>
+            </el-form-item>
+            <el-form-item prop="password">
+                <el-input v-model="user.password" placeholder="请输入密码" type="password" >
+                    <svg  slot="prefix" class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-mima"></use>
+                    </svg>
+                </el-input>
+            </el-form-item>
+            <div>
+                <el-button size="medium" type="primary" @click.native="validate">登录</el-button>
+            </div>
+        </el-form>
+    </div>
+</div>

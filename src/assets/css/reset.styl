@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-size: $s5;
+}
+
+html,body{
+    height 100%
+    width 100%
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*布局头部reset*/
+.el-header {
+    background-color: #b3c0d1;
+    color: #333;
+    line-height: 60px;
+}
+
+/*导航菜单reset*/
+.el-menu-vertical:not(.el-menu--collapse) {
+    width: 280px;
+    border-right none
+}
+.el-submenu__title{
+    >span{
+        font-size 14px
+    }
+    i{
+        color #fff
+    }
+
+    .el-icon-arrow-down:before {
+        content: "\E62B";
+    }
+}
+.is-opened{
+    >.el-submenu__title{
+        .el-icon-arrow-down:before {
+            content: "\E621";
+        }
+    }
+}
+
+
+/*选项卡样式重置*/
+.el-tabs--border-card {
+    border: none !important;
+    box-shadow: none !important;
+
+    > .el-tabs__content {
+        padding: 0 !important;
+    }
+}
+
+/* 功能区按钮 */
+.el-button--text {
+    color: #5a5e66;
+    background: rgba(255,255,255,0);
+    border: none;
+}
+.el-button--text:hover {
+    color: #fff;
+    border-color: #66b1ff;
+    background-color: #409EFF;
+}
+.el-button--mini, .el-button--mini.is-round {
+    padding: 7px 10px;
+}
+
+/*
+弹窗
+ */
+.el-dialog__header{
+    background-color #dff5ff;
+    padding 5px
+
+    .el-dialog__title{
+        font-size 13px
+        color #666
+    }
+}
+.el-dialog__headerbtn{
+    top 6px
+}
+//弹窗input控件
+.input{
+    width 160px!important
+}
+.el-input.is-disabled .el-input__inner {
+    background-color: rgba(245, 245, 245, 0.6);
+    color: #666;
+}
+
+/*
+*表格单元格不换行
+ */
+.el-table .cell {
+    white-space: nowrap;
+}
+
+/*
+    树形下拉框高度控制
+ */
+.vue-treeselect__control {
+    height: 30px;
+}
+.vue-treeselect--has-value .vue-treeselect__input {
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+
+/*
+滚动条
+
+//谷歌、safari、qq浏览器、360浏览器滚动条样式//
+//定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸//
+::-webkit-scrollbar
+{
+    width: 10px;
+    height: 10px;
+    background-color: #F5F5F5;
+}
+//定义滚动条轨道 内阴影+圆角//
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+//定义滑块 内阴影+圆角//
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #bdbdbd;
+}
+//滑块效果//
+::-webkit-scrollbar-thumb:hover
+{
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.4);
+}
+//IE滚动条颜色//
+html {
+    scrollbar-face-color:#bfbfbf;//滚动条颜色//
+    scrollbar-highlight-color:#000;
+    scrollbar-3dlight-color:#000;
+    scrollbar-darkshadow-color:#000;
+    scrollbar-Shadow-color:#adadad;//滑块边色//
+    scrollbar-arrow-color:rgba(0,0,0,0.4);//箭头颜色//
+    scrollbar-track-color:#eeeeee;//背景颜色//
+} */
+
+

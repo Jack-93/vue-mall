@@ -1,0 +1,101 @@
+// 尺寸定义
+$size = 10px;
+$s5 = $size * 1.2;
+$s4 = $size * 1.4;
+$s3 = $size * 1.6;
+$s2 = $size * 1.8;
+$s1 = $size * 2.0;
+
+// 色彩定义
+// 灰度
+$gray(degree){
+	hsl(0, 0, (100 - degree) + '%')
+}
+
+// 白
+$c_white				= #ffffff;
+// 灰
+$c_gray 				= #666666;
+$c_gray_light 			= #999999;
+$c_gray_dark 			= #333333;
+// 红
+$c_red					= #ff0000;
+// 橙
+$c_orange				= #fd6a39;
+// 绿
+$c_green 				= #00a36d;
+$c_green_dark 			= #01835a;
+// 淡蓝
+$c_blue					= #192f38;
+$c_blue_light			= #213b46;
+$c_blue_dark 			= #13252c;
+
+// 功能色
+$c_bg					= #f5f8fa;
+$c_tip					= #bfbfbf;
+$c_border		 		= #e8e8e8;
+$c_border_light 		= #ededed;
+$c_border_dark 			= #e0e0e0;
+$c_split_light 			= #324e59;
+$c_split_dark 			= #0a171c;
+$c_menu_text			= #dbedf4;
+
+
+// 清除浮动
+$clear(){
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+// flex布局
+$flex(){
+	line-height: normal;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+// 阴影
+$shadow(){
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+}
+
+// 圆角
+$round() {
+	border-radius: 4px;
+}
+
+// 边框
+$border(dir = 'all'){
+	if(dir == 'all'){
+		border: 1px solid $gray(12);
+	}
+	else{
+		border-{dir}: 1px solid $gray(12);
+	}
+}
+
+// 滚动条
+$scrollbar(){
+	/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+	::-webkit-scrollbar{
+		width: 5px;
+		height: 5px;
+		background-color: #fff;
+	}
+
+	/*定义滑块，内阴影及圆角*/
+	::-webkit-scrollbar-thumb{
+		border-radius: 2px;
+		background-color: #d8d8d8;
+	}
+}
+
+// 文本溢出
+$textwrap() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

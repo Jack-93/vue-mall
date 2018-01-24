@@ -1,0 +1,181 @@
+/**
+ * 网格系统
+ */
+// 容器
+.g-container{
+    width: 100%;
+    overflow: hidden;
+}
+// 行
+.g-row{
+    $clear();
+}
+// 列-无宽度
+.g-col{
+    float: left;
+}
+// 列-12列栅格&偏移
+for num in 1..12{
+    .g-col-{num}{
+        float: left;
+        width: (100/12*num) + '%';
+        word-wrap: break-word;
+    }
+
+    .g-col-offset-{num}{
+        margin-left: (100/12*num) + '%';
+    }
+}
+// 网格间距
+$gutter = 5px;
+.g-gutter{
+    margin: 0 (- $gutter);
+    >*{
+        padding: 0 $gutter;
+    }
+}
+// 向下间距
+.g-spacer{
+    margin-bottom: 20px;
+}
+// 块级下间距
+.g-block-spacer{
+    margin-bottom: 20px;
+}
+// 内容下间距
+.g-content-spacer{
+    margin-bottom: 10px;
+}
+
+.g-margin-right{
+    margin-right:20px;
+}
+
+.g-margin-left{
+    margin-top:20px;
+}
+
+
+// 边框
+.g-border{
+    border-bottom: 1px solid $c_border;
+}
+
+/**
+ * 对齐
+ */
+// 内容左对齐
+.g-left{
+    text-align: left;
+}
+// 内容右对齐
+.g-right{
+    text-align: right;
+}
+// 内容居中
+.g-center{
+    text-align: center;
+}
+
+/**
+ * 容器
+ */
+// 全局容器
+html, body{
+    height: 100%;
+    background: $c_bg;
+}
+// 通用视图
+.g-view{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+// 通用容器块
+.g-block{
+    padding: 20px;
+}
+// 通用盒子
+.g-box{
+    border: 1px solid $c_border_light;
+}
+.g-content{
+    background: $c_white;
+}
+// 左右间隔
+.g-container{
+    padding: 0 20px;
+}
+
+//通用
+.g-noDate{
+    text-align: -webkit-center;
+    line-height: 30;
+}
+
+//卡片的样式,
+.g-card{
+    height: 120px;
+    width: 100%;
+    border: 1px solid $c_border;
+    margin-bottom: 20px;
+    cursor: pointer;
+    .g-card-title{
+        padding: 10px;
+        background: #f7f7f7;
+
+        span:nth-child(1){
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        span:nth-child(2){
+            font-size: 12px;
+            color: #666;
+            position: relative;
+            i{
+                width: 10px;
+                height: 10px;
+                background-color: #b80e00;
+                position: absolute;
+                border-radius: 50%;
+                top: 3px;
+                margin-left: -15px;
+
+            }
+        }
+    }
+    .g-card-content{
+        padding: 10px;
+        > div{
+            p:nth-child(1){
+                font-size: 12px;
+                color: #999;
+                margin: 8px 0 4px 12px;
+            }
+            p:nth-child(2){
+                font-size: 16px;
+                color: #333;
+            }
+        }
+    }
+}
+
+// 清除浮动
+.clearFix:after{
+    centent:"";//设置内容为空
+    height:0;//高度为0
+    line-height:0;//行高为0
+    display:block;//将文本转为块级元素
+    visibility:hidden;//将元素隐藏
+    clear:both;//清除浮动
+}
+.clearFix{
+    zoom: 1;
+}

@@ -1,0 +1,95 @@
+/**
+ * 按钮
+ */
+// 按钮基类
+.g-btn{
+	font-size: $s4;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 5px;
+	color: $c_white;
+	background: $c_tip;
+	cursor: pointer;
+}
+
+// 小号按钮基类
+.g-sm-btn{
+    color: $c_white;
+    line-height: 26px;
+    height: 30px;
+    padding: 0 15px;
+    $round();
+    cursor: pointer;
+	background: $c_tip;
+}
+
+// 按钮图标添加
+.g-btn-icon{
+	i{
+		font-size: 14px;
+		font-weight: 800;
+		font-style: normal;
+	}
+}
+
+// 圆角
+.g-btn-round{
+	border-radius: 5px;
+}
+// 按钮-默认
+.g-btn-default{
+	padding: 0px 20px;
+}
+// 按钮-全尺寸
+.g-btn-wide{
+	width: 100%;
+}
+// 按钮-绿色
+.g-btn-green{
+	color: #fff;
+	background: $c_green;
+	border-top: 1px solid $c_green;
+}
+// 按钮-绿色-hover
+.g-btn-green-hover:hover{
+	background-color: $c_green_dark;
+	border-top: 1px solid $c_green_dark !important;
+	color: #FFF;
+}
+
+.g-btn-green-border{
+	color: $c_green;
+	border 1px solid $c_green;
+	background: $c_white;
+	>i{
+		font-size: 14px;
+		padding-let: 5px;
+	}
+}
+
+// 按钮-红色
+.g-btn-red{
+	color: #fff;
+	background: $c_red;
+}
+//按钮-白色
+.g-btn-white{
+	border-top: 1px solid $c_border;
+	color: $c_split_dark;
+	background: #FFF;
+}
+.g-btn-menu{
+	$border();
+	color: $gray(60);
+	background: #FFF;
+
+	&:hover{
+		background: $gray(3);
+	}
+}
+
+// 按钮-白色-hover
+.g-btn-white-hover:hover{
+	background-color: #f2f2f2;
+}
